@@ -5,11 +5,6 @@ USE test;
 
 
 -- Taula alumnes:
---     id (sencer sense signe)
---     nom (cadena de caràcters)
---     cognom1 (cadena de caràcters)
---     cognom2 (cadena de caràcters)
---     nota (nombre real)
 
 DROP TABLE IF EXISTS alumnes;
 CREATE TABLE alumnes (
@@ -18,10 +13,9 @@ CREATE TABLE alumnes (
     cognom1 VARCHAR(20),
     cognom2 VARCHAR(20),
     nota REAL,
+    email VARCHAR(20),
     PRIMARY KEY(id)
 );
-
-
 
 -- Procediment: crear_email
 -- Arguments d’entrada:
@@ -51,4 +45,22 @@ END //
 
 DELIMITER ;
 
-CALL crear_email("Hugo","Notario","Fructuoso","gmail.com",@resultado)
+
+-- Trigger
+DROP TRIGGER IF EXISTS crear_email_before_insert;
+
+DELIMITER $$
+
+CREATE TRIGGER crear_email_before_insert
+BEFORE INSERT ON alumnes
+FOR EACH ROW
+
+BEGIN
+
+    IF NEW.email IS NULL THEN
+        CALL crear_email(NEW.nom, NEW.cognom1, NEW.cognom2, "email.com", NEW.email);
+    END IF;
+
+END $$
+
+DELIMITER ;

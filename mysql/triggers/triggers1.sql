@@ -4,14 +4,12 @@ CREATE DATABASE test;
 USE test;
 
 
-------------------------------------
 -- Taula alumnes:
 --     id (sencer sense signe)
 --     nom (cadena de caràcters)
 --     cognom1 (cadena de caràcters)
 --     cognom2 (cadena de caràcters)
 --     nota (nombre real)
-------------------------------------
 
 DROP TABLE IF EXISTS alumnes;
 CREATE TABLE alumnes (
@@ -24,13 +22,11 @@ CREATE TABLE alumnes (
 );
 
 
--------------------------------------------------------------------------------------------
 -- Trigger 1: trigger_check_nota_before_insert
 --     S'executa sobre la taula alumnes.
 --     S'executa abans d'una operació d'inserció.
 --     Si el nou valor de la nota que es vol inserir és negatiu, es guarda com 0.
 --     Si el nou valor de la nota que es vol inserir és més gran que 10, es guarda com 10.
--------------------------------------------------------------------------------------------
 
 DROP TRIGGER IF EXISTS check_nota_before_insert;
 
@@ -55,13 +51,11 @@ END $$
 DELIMITER ;
 
 
-----------------------------------------------------------------------------------------------
 -- Trigger2: trigger_check_nota_before_update
 --     S'executa sobre la taula alumnes.
 --     S'executa abans d'una operació d'actualització.
 --     Si el nou valor de la nota que es vol actualitzar és negatiu, es guarda com 0.
 --     Si el nou valor de la nota que es vol actualitzar és més gran que 10, es guarda com 10.
-----------------------------------------------------------------------------------------------
 
 DROP TRIGGER IF EXISTS check_nota_before_update;
 
