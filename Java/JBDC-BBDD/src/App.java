@@ -1,6 +1,4 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class App {
     public static void main(String[] args) {
@@ -9,7 +7,16 @@ public class App {
             String user = "jdbc";
             String password = "123";
 
-            Connection con = DriverManager.getConnection(url, user, password);
+            try (Connection con = DriverManager.getConnection(url, user, password)) {
+                String getAuthorsQuery = "SELECT * FROM autor";
+                PreparedStatement getAuthorsStmnt = con.prepareStatement(getAuthorsQuery);
+
+                ResultSet result = getAuthorsStmnt.executeQuery();
+
+                while (result.next()) {
+                    System.out.println(result.getString("Nombre"));
+                }
+            }
         } catch (SQLException e) {
             System.err.println(e);
         }
