@@ -5,7 +5,7 @@ USE limbo;
 DROP TABLE IF EXISTS Ciutat;
 CREATE TABLE Ciutat (
    codiCiutat INT NOT NULL,
-   nom CHAR(40),
+   nomCiutat CHAR(40),
    provincia CHAR(40),
    PRIMARY KEY (codiCiutat)
 );
@@ -59,24 +59,24 @@ CREATE TABLE Empreses (
 
 DROP TABLE IF EXISTS Targeta;
 CREATE TABLE Targeta (
-   numero INT NOT NULL,
+   numeroTargeta INT NOT NULL,
    tipus CHAR(40),
    caducitat DATE,
    codiSeguretat INT,
    numClient INT,
    FOREIGN KEY (numClient)
       REFERENCES Client(numClient) ON DELETE CASCADE,
-   PRIMARY KEY (numero)
+   PRIMARY KEY (numeroTargeta)
 );
 
 DROP TABLE IF EXISTS Compra;
 CREATE TABLE Compra (
-   codi INT NOT NULL,
+   codiCompra INT NOT NULL,
    data DATE,
    numeroTargeta INT,
    FOREIGN KEY (numeroTargeta)
-      REFERENCES Targeta(numero) ON DELETE CASCADE,
-   PRIMARY KEY (codi)
+      REFERENCES Targeta(numeroTargeta) ON DELETE CASCADE,
+   PRIMARY KEY (codiCompra)
 );
 
 DROP TABLE IF EXISTS Producte;
@@ -97,7 +97,7 @@ CREATE TABLE Producte_Compra (
    codiProducte CHAR(40) NOT NULL,
    nombreUnitats INT,
    FOREIGN KEY (codiCompra)
-      REFERENCES Compra(codi) ON DELETE CASCADE,
+      REFERENCES Compra(codiCompra) ON DELETE CASCADE,
    FOREIGN KEY (codiProducte)
       REFERENCES Producte(codiProducte) ON DELETE CASCADE,
    PRIMARY KEY (codiCompra, codiProducte)
@@ -106,7 +106,7 @@ CREATE TABLE Producte_Compra (
 DROP TABLE IF EXISTS Historial_Descomptes;
 CREATE TABLE Historial_Descomptes (
    numClient INT NOT NULL,
-   codiProducte CHAR(40),
+   codiProducte CHAR(40) NOT NULL,
    data DATE,
    percentatge INT,
    FOREIGN KEY (numClient)
