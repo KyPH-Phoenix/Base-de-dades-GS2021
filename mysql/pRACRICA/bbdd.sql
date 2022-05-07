@@ -61,7 +61,7 @@ DROP TABLE IF EXISTS Targeta;
 CREATE TABLE Targeta (
    numero INT NOT NULL,
    tipus CHAR(40),
-   caducitat CHAR(40),
+   caducitat DATE,
    codiSeguretat INT,
    numClient INT,
    FOREIGN KEY (numClient)
@@ -73,7 +73,6 @@ DROP TABLE IF EXISTS Compra;
 CREATE TABLE Compra (
    codi INT NOT NULL,
    data DATE,
-   import INT,
    numeroTargeta INT,
    FOREIGN KEY (numeroTargeta)
       REFERENCES Targeta(numero) ON DELETE CASCADE,
@@ -108,7 +107,7 @@ DROP TABLE IF EXISTS Historial_Descomptes;
 CREATE TABLE Historial_Descomptes (
    numClient INT NOT NULL,
    codiProducte CHAR(40),
-   data CHAR(40),
+   data DATE,
    percentatge INT,
    FOREIGN KEY (numClient)
       REFERENCES Client(numClient) ON DELETE CASCADE,

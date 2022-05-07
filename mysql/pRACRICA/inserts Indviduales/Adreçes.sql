@@ -1,0 +1,22 @@
+USE limbo;
+
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (1, 60, 'Roth', 1, '21345', 1, '2j', 121);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (2, 82, 'Mitchell', 2, '87982', 2, '7n', 123);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (3, 120, 'Evergreen', 3, '83642', 3, '6a', 133);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (4, 139, 'Canary', 4, '40817', 4, '1k', 195);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (5, 189, 'Buell', 5, '65980', 5, '3e', 198);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (6, 322, 'Waywood', 6, '07560', 6, '6y', 301);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (7, 396, 'Graceland', 7, '76324', 7, '1o', 340);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (8, 447, 'Stephen', 8, '25678', 8, '7s', 380);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (9, 461, 'Stang', 9, '18247', 9, '5i', 526);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (10, 515, 'Center', 10, '16452', 10, '6i', 565);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (11, 534, 'Scofield', 11, '62056', 11, '8z', 572);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (12, 650, 'Dakota', 12, '9211', 12, '8l', 704);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (13, 735, 'Fairview', 13, '35590000', 13, '4k', 726);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (14, 761, 'Bultman', 14, '4206', 14, '3z', 727);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (15, 833, 'Grover', 15, '24956', 15, '4d', 780);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (16, 885, 'La Follette', 16, '3105', 16, '7m', 847);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (17, 900, 'Commercial', 17, '53580', 17, '6j', 857);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (18, 912, 'Brickson Park', 18, '18290', 18, '3x', 867);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (19, 940, 'Bartillon', 19, '44001', 19, '1w', 963);
+INSERT INTO `Adreça` (`codiAdreça`, `numClient`, `carrer`, `num`, `codiPostal`, `pis`, `porta`, `codiCiutat`) VALUES (20, 993, 'Northridge', 20, '524039', 20, '3r', 972);
