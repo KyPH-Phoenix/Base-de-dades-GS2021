@@ -249,6 +249,8 @@ INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VA
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (8108, '2952nlk', 96);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (8108, '5176wpx', 842);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (8108, '7678kln', 758);
+INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (57432, '1803tcn', 45);
+INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (57432, '0100ues', 67);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (57432, '0134dpo', 930);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (57432, '1875mfe', 972);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (57432, '3210qby', 110);
@@ -274,6 +276,7 @@ INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VA
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (258405, '3440hjc', 437);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (258405, '6139mjl', 649);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (258405, '8188ujn', 39);
+INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (258405, '2107cfu', 102);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (332235, '0446qit', 357);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (332235, '2107cfu', 731);
 INSERT INTO `Producte_Compra` (`codiCompra`, `codiProducte`, `nombreUnitats`) VALUES (332235, '3443oli', 236);
