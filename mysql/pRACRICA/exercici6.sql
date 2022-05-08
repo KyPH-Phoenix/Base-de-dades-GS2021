@@ -55,12 +55,29 @@ DELIMITER ;
 --      la base de dades, la quantitat venida d’aquell producte i l’import produït. 
 --      Aquestes dades les heu de guardar dins una altre taula i la transacció ha de
 --      ser a nivell global (és a dir, o es fan totes les operacions o cap).
+CREATE 
 
-SELECT codiCompra, Compra.data, Producte.codiProducte, nombreUnitats, ((PVP - (PVP * (IFNULL(percentatge, 0) / 100)) + (PVP * (IVA / 100))) * nombreUnitats) AS total FROM Client
-        NATURAL JOIN Targeta 
-        NATURAL JOIN Compra
-        NATURAL JOIN Producte_Compra
-        NATURAL JOIN Producte
-        LEFT JOIN Historial_Descomptes ON (Producte.codiProducte = Historial_Descomptes.codiProducte) AND (Client.numClient = Historial_Descomptes.numClient)
-        WHERE MONTH(Compra.data) = 6;
+DROP PROCEDURE IF EXISTS productePerMes;
+
+DELIMITER //
+
+CREATE PROCEDURE productePerMes(IN mes INT)
+BEGIN
+
+    SELECT Producte.codiProducte, SUM(nombreUnitats) AS nombreUnitatsTotals, 
+    (SUM((PVP - (PVP * (IFNULL(percentatge, 0) / 100)) + (PVP * (IVA / 100))) * nombreUnitats)) AS importProduit FROM Client
+    NATURAL JOIN Targeta 
+    NATURAL JOIN Compra
+    NATURAL JOIN Producte_Compra
+    NATURAL JOIN Producte
+    LEFT JOIN Historial_Descomptes ON (Producte.codiProducte = Historial_Descomptes.codiProducte) AND (Client.numClient = Historial_Descomptes.numClient)
+    WHERE MONTH(Compra.data) = mes 
+    GROUP BY Producte.codiProducte
+    ORDER BY Producte.codiProducte;    
+
+END //
+
+DELIMITER ;
+
+CALL productePerMes(3);
 
